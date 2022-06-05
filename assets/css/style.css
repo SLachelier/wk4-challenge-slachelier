@@ -2,15 +2,16 @@
     --bgColor: #8a9fb4;
     --bgBtn: #7bdff2;
     --btnHover: #b2f7ef;
-    --text: #003554;
+    --text: #143e57;
+    font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 *, *::before, *::after {
-    font-family: Century Gothic;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
     background-color: var(--bgColor);
 }
 
@@ -60,16 +61,33 @@ h2 {
 
 .btn {
     cursor: pointer;
-    padding: 8px 15px;
-    margin: 5px 10px;
-    background-color: var(--bgBtn);
+    background: linear-gradient(90deg, var(--bgBtn) 0%, var(--btnHover));
     border: none;
-    box-shadow: 0px 0px 4px 1px;
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: var(--text);
 }
 
 .btn:hover {
-    background-color: var(--btnHover);
+    background: var(--bgBtn);
     box-shadow: none;
+    box-shadow: 0 0.3rem 1.2rem 0 rgba(0, 0, 0, 0.5);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, rgb())
 }
 
 .hide {
@@ -77,4 +95,6 @@ h2 {
 }
 header {
     font-size: 3.8rem;
+    display: flex;
+    justify-content: end;
 }
